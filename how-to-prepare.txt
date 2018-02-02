@@ -1,0 +1,97 @@
+How to Prepare for the Proxor C Exam
+2015
+
+To prepare for this pilot exam, you should download either of the following:
+
+- proxor-c-exam-study-v1.zip, which contains mostly code and text files. 
+  You must supply your own development environment that can edit, compile,
+  and run C programs.
+- [in progress] proxor-c-exam-study-v1.ova, which is a full virtual
+  machine similar to the system you will use in the exam. It contains
+  all of the code in proxor-c-exam-study-v1.zip along with the
+  complete environment (Ubuntu Linux) that you will use in the actual
+  exam. You will need to install Virtual Box to access this virtual
+  machine. The following checksum can be used to verify the integrity
+  of the proxor-c-exam-study-v1.ova file: SHA256
+  (proxor-c-exam-study-v1.ova) = [in progress]
+
+Note that the proxor-c-exam-study-v1.zip is a significantly smaller file
+to download and exam takers who already have a comfortable local
+development environment can adequately prepare for the examination
+with this file.
+
+The exam environment will use the Gnu C compiler with the option
+-std=gnu89. This is the default language version for Ubuntu Linux
+version 14. The exam environment will also have standard Unix tools
+such as make and gdb. Exam takers can also use Eclipse, Emacs, and
+Vim. (Do not expect pre-built Eclipse projects. Proxor will present
+the exam tasks just as they are in the proxor-c-exam-study-v1.zip file.
+
+The exam will consist of 4 programming tasks. Some of these tasks may be
+based on the following software:
+
+- rb_tree is a directory containing an implementation of the red-black
+  tree algorithm. Tasks based on this software will link with the code
+  in rb_tree. You will be provided with the source code in rb_tree.
+
+- cmcmd is a directory containing an extensible command processor named
+  cmcmd. This code is based on a real command processor library that
+  facilitated debugging embedded systems software written for a 
+  microcontroller.
+
+- sqlite3 is a widely-used light-weight SQL database. Documentation is 
+  provided, but source code is not included with the tasks.
+
+You should become familiar with this software, learning the structure; 
+how the programs work; and how to compile, run, and use rb_tree and 
+cmcmd. You should also know some basic SQL and how to use the sqlite3
+API. If you are not familiar with SQL, you might want to read the SQL
+tasks, read the provided code, and write and test code to access data
+using SQL queries, even if you do not write complete solutions to the
+tasks.
+
+Twenty (20) tasks are included. Each one is contained in a separate 
+directory. The tasks are:
+
+    carray
+    ccvt
+    cexp
+    cmath
+    exclip 
+    exdst 
+    exidx 
+    exzero 
+    gbitset
+    gfileio
+    gfsm
+    grev
+    rbcal
+    rbdict
+    rbsort
+    rbspell
+    rbwordcount
+    sqlex
+    sqlvalid
+    sqlverif
+
+Each of these directories contains a file named README.txt. The 
+README.txt files tell you what to do for each task.
+
+We recommend that you implement these tasks. For example, implement
+rbcal by modifying rbcal/rbcal.c according to rbcal/README.txt.
+
+Notice that most tasks have some preliminary testing built-in. You 
+may want to write additional test code to exercise your solution,
+but in the actual exam, you should disable any additional test code 
+before turning in your solution.
+
+The exam tasks will all be of this same form: For each task in 
+the exam itself,
+- Read the README.txt file in the project folder to learn what to 
+  implement.
+- Modify the code that is provided in the project folder. You can 
+  create new files, but generally this will not be necessary.
+- Test your code.
+   o Run the given code according to the README.txt
+   o Perform any other testing you wish.
+- Submit your solution.
