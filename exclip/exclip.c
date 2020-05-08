@@ -21,10 +21,19 @@
  *    min if val is lower than min, max if val is greater than max, 
  *        and otherwise val
  */
-int clip(int val, int min, int max)
+signed int clip(signed int val,signed int min,signed int max)
 {
-    /* You should modify clip to meet the specifications */
-    return 0;
+if(max>min)
+{
+ if(val>max)
+	return max;
+ else if(val<min)
+	return min;
+ else
+	return val;
+}
+else
+	return -1;
 }
 
 /*
@@ -32,6 +41,7 @@ int clip(int val, int min, int max)
  */
 int main(void) 
 {
-    /* put any tests you like in here */
+  signed  int t = clip(3,-1,5);
+printf("%d",t);
     return EXIT_SUCCESS;
 }
